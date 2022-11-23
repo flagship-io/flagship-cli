@@ -7,6 +7,7 @@ package cmd
 import (
 	"os"
 
+	"github.com/flagship-io/flagship/cmd/analyse"
 	"github.com/flagship-io/flagship/cmd/authorization"
 	"github.com/flagship-io/flagship/cmd/campaign"
 	"github.com/flagship-io/flagship/cmd/flag"
@@ -67,6 +68,7 @@ func addSubCommandPalettes() {
 	rootCmd.AddCommand(targetingkey.TargetingKeyCmd)
 	rootCmd.AddCommand(version.VersionCmd)
 	rootCmd.AddCommand(token.TokenCmd)
+	rootCmd.AddCommand(analyse.AnalyseCmd)
 }
 func init() {
 	cobra.OnInitialize(initConfig)
